@@ -3,8 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
 })
+
+//* Defino el component y sus atributos
 export class AppComponent {
-  title = 'bases';
+  public title: string = 'Titulo de la pagina'; //* Defino atributo
+
 }
+
+

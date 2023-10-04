@@ -1,0 +1,61 @@
+<!-- Lista creado sin usar ngfor, vemos que repite codigo y no es eficiente-->
+<!--
+<p>Listado de superheroes sin ngFor</p>
+<ul >
+    <li class=" list-group-item"> AVENGERS  </li>
+    <li class=" list-group-item"> SPIDER-MAN </li>
+    <li class=" list-group-item"> WOLVERINE </li>
+    <li class=" list-group-item"> HULK </li>
+    <li class=" list-group-item"> IRON MAN </li>
+    <li class=" list-group-item"> CAPITÁN AMÉRICA </li>
+    <li class=" list-group-item"> HAWKEYE </li>
+    <li class=" list-group-item"> LUKE CAGE  </li>
+    <li class=" list-group-item"> LOS TRES GUERREROS  </li>
+    <li class=" list-group-item"> CAPITÁN MARVEL </li>
+</ul>
+-->
+
+
+<!-- Creo la misma lista, uando ngFor para crear tanto LI como items tenga en la propiedad de la clase -->
+<p class="font-weight-bold"> Listado de superheroes usando ngFor </p>
+
+<button
+*ngIf="heroNames.length > 0"
+(click)="removeLastHero()"
+class="btn btn-outline-danger"
+>Borrar heroe</button>
+
+<ul class="mt-2 list-group">
+  <li class=" list-group-item"
+  *ngFor="let names of heroNames">
+  {{ names }}
+  </li>
+</ul>
+
+<br>
+
+<!-- uso ngIfs para mostrar/ocultar en el DOM la etiqueta, pero esto se mejora con ngTemplate
+<div *ngIf="deletedHeroe">
+  <h3> Heroe borrado: <small class="text-danger"> {{ deletedHeroe }}  </small>  </h3>
+</div>
+<div *ngIf="!deletedHeroe">
+  <h3> No se borro ningun superheroe</h3>
+</div>
+-->
+
+<!-- Con template, uso el ngIf-else  para crear o no en el dom la etiqueta  -->
+<div *ngIf="deletedHeroe; else nothigWasDeleted">
+  <h3> Heroe borrado: <small class="text-danger"> {{ deletedHeroe }}  </small>  </h3>
+</div>
+
+<!-- Defino el template, que se muestra cuando la condicion del ngIf se cumple -->
+<ng-template #nothigWasDeleted>
+  <h3> No se borro ningun superheroe</h3>
+</ng-template>
+
+
+
+
+
+
+
