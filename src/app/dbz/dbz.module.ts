@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MainPageComponent } from './pages/main-page.components';
 import { ListComponent } from './components/list/list.component';
 import { AddCharacterComponent } from './components/add-character/add-character.component';
+import { FormsModule } from '@angular/forms';
 
 //* Creo modulo
 @NgModule({
@@ -10,7 +11,7 @@ import { AddCharacterComponent } from './components/add-character/add-character.
   declarations: [ MainPageComponent, ListComponent, AddCharacterComponent],
   //* importo modulos
   imports: [
-    CommonModule
+    CommonModule, FormsModule
   ],
   //* exportlo los componenetes que usarè
   exports: [ MainPageComponent ]
