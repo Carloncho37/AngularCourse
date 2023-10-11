@@ -20,7 +20,7 @@ import { HeroesModule } from './heroes/components/heroes/heroes.module';
   ],
   imports: [
     BrowserModule,
-    //* Se agrega aqui el modulo creado
+    //* Se agrega aqui los modulo creados
     CounterModule,
     HeroesModule,
     DbzModule

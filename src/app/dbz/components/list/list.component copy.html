@@ -1,0 +1,35 @@
+<!-- Defino HTML-->
+<!-- Uso clases de Boostrap -->
+<h4> Listado </h4>
+<ul class="list-group">
+  <!-- Expando el NgFor, declaro con let variables para el uso. See documentations -->
+  <li *ngFor="let character of characterList;
+    let i = index;
+    let isFirst = first;
+    let isLast = last;
+    let isEven = even;
+    let isOdd = odd;
+    "
+    class="list-group-item"
+    [ngClass]="{'list-group-item-success': true}"
+    >
+
+    <span class="text-primary"> {{ i +1 }}- </span>
+
+    <span> {{ character.name }} - </span>
+
+    <span> Power: {{ character.power }}  </span>
+
+    <!-- declaro variables porpias del Ngfor Utiles
+    <span> Es par?: {{ isEven }} || </span>
+    <span> Es impar? : {{ isOdd }} || </span>
+    <span> Es el primero? : {{ isFirst }} || </span>
+    <span> Es el ultimo?: {{ isLast }}  </span>
+    -->
+  </li>
+
+  <!-- Defino nueva lista con el NgFor
+  <li class="list-group-item"> Krillin - 5000 </li>
+  <li class="list-group-item"> Goku - 10000 </li>
+   -->
+</ul>
