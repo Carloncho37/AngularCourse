@@ -2,10 +2,16 @@
 
   <div class="col">
     <!-- Aqui uso [] para pasar la propiedad que voy a importar -->
-    <dbz-list [characterList]="characters"> </dbz-list>
+    <dbz-list [characterList]="characters"
+              (onDelete)="onDeleteCharacter($event)"
+    >
+
+    </dbz-list>
   </div>
 
   <div class="col">
-    <dbz-add-character> </dbz-add-character>
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)" >
+
+    </dbz-add-character>
   </div>
 </div>

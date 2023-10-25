@@ -1,6 +1,6 @@
 <form
   class="row"
-  (ngSubmit)="emitCharacter()"
+    (ngSubmit)="emitCharacter()"
   >
   <input
   [(ngModel)]="character.name"
@@ -11,7 +11,7 @@
 
   <input
   [(ngModel)]="character.power"
-  type="numbeer"
+  type="number"
   name ="power"
   class="fomr-control mb-2"
   placeholder="Poder">
@@ -23,7 +23,8 @@
     Agregar
   </button>
 
+  <!-- Etiqueta pre
   <pre> {{character | json}} </pre>
-
+  -->
 </form>
 
