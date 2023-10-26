@@ -6,8 +6,11 @@
     "start": "ng serve -o",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "http-server": "http-server -o ./dist/bases"
+
   },
+
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.2.8",
