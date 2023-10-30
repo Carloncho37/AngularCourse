@@ -9,7 +9,7 @@ export class HeroComponent {
   public name : string = 'ironman';
   public age : number = 27;
 
-  //* Creo metodo (se usa como propiedad)
+  //* Creo metodo ( se usa como propiedad)
   get capitalizedName (): string {
     return this.name.toUpperCase();
   }

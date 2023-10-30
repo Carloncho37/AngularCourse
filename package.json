@@ -6,7 +6,7 @@
     "start": "ng serve -o",
     "build": "ng build",
     "build:href": "ng build --base-href ./",
-    "build:github" : "npm run git:pushrepo && npm run delete:docs && npm run build && npm run copy:dist && npm run delete:dist",
+    "build:github" : "npm run delete:doc-dist && npm run git:pushrepo && npm run build:href && npm run copy:dist && npm run delete:dist",
     "git:add" : "git add .",
     "git:commit" : "git commit -m 1",
     "git:push" : "git push origin",
@@ -16,6 +16,7 @@
     "http-server": "http-server -o ./docs",
     "delete:docs": "del docs",
     "delete:dist": "del dist",
+    "delete:doc-dist": "del doc del dis",
     "copy:dist": "copyfiles dist/bases/* ./docs -f"
   },
   "private": true,
