@@ -6,7 +6,7 @@
     "start": "ng serve -o",
     "build": "ng build",
     "build:href": "ng build --base-href ./",
-    "build:github" : "npm run delete:doc-dist && npm run git:pushrepo && npm run build:href && npm run copy:dist && npm run delete:dist",
+    "build:github" : "npm run delete:doc-dist && npm run build:href && npm run copy:dist && npm run delete:dist && npm run git:pushrepo ",
     "git:add" : "git add .",
     "git:commit" : "git commit -m 1",
     "git:push" : "git push origin",
