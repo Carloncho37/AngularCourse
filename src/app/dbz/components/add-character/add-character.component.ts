@@ -19,7 +19,7 @@ export class AddCharacterComponent {
   };
 
   emitCharacter() :void {
-    //* Emito por consola el personaje
+    //* Emito por consola el personaje.
     console.log(this.character);
     //! Valido que posea nombre
     if (this.character.name.length === 0 ) return;
